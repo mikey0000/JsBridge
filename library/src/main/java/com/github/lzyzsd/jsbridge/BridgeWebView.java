@@ -19,11 +19,11 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressLint("SetJavaScriptEnabled")
-public class BridgeWebView extends WebView implements WebViewJavascriptBridge {
+public class BridgeWebView extends WebView implements BridgeCommander {
 
 	private final String TAG = "BridgeWebView";
 
-	public static final String toLoadJs = "WebViewJavascriptBridge.js";
+	public static final String toLoadJs = "BridgeCommander.js";
 	Map<String, CallBackFunction> responseCallbacks = new HashMap<String, CallBackFunction>();
 	Map<String, BridgeHandler> messageHandlers = new HashMap<String, BridgeHandler>();
 	BridgeHandler defaultHandler = new DefaultHandler();
